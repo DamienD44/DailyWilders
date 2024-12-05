@@ -1,13 +1,14 @@
 import "./App.css";
 
+import Header from "./components/header/Header";
+
 function App() {
   return (
     <>
       <header>
-        <h1>Daily Wilder</h1>
+        <Header />
       </header>
     </>
   );
 }
-
 export default App;
