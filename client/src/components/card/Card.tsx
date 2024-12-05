@@ -1,4 +1,4 @@
-import type { CardProps } from "./Card.types";
+import type { CardProps } from "./Card.d";
 
 import "./Card.css";
 

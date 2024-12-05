@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Caroussel.css";
-import Slider from "./Slider/Slider";
+import "./Button.css";
+import Slider from "./Slider/Slider.tsx";
 
 const image = [
   {
@@ -63,32 +64,25 @@ export default function Caroussel() {
 
   return (
     <>
-      <section className="slider-container">
-        <p>{indexImage}</p>
-        <section className="slide-animation">
-          <Slider imageSrc={image[indexImage].src} />
-        </section>
-        <section className="slider-button-wrapper">
+      <section className="caroussel-container">
+        <Slider imageSrc={image[indexImage].src} />
+        <section className="caroussel-button-wrapper">
           <button
             type="button"
-            className="slide-button"
+            className="button-caroussel"
             onClick={() => toggleImage(-1)}
           >
             &#x27E8;
           </button>
           <button
             type="button"
-            className="slide-button"
+            className="button-caroussel"
             onClick={() => toggleImage(1)}
           >
             &#x27E9;
           </button>
         </section>
       </section>
-
-      {/* <figure className="slider-figure">
-        <img src={imageSrc} alt="" className="slider-img" />
-      </figure> */}
     </>
   );
 }
