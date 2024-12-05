@@ -1,6 +1,9 @@
-import "./App.css";
-import Footer from "./components/Footer/Footer";
-import { Card } from "./components/card/Card";
+import "./styles/Globals.css";
+import Caroussel from "./components/Caroussel/Caroussel.tsx";
+import Footer from "./components/Footer/Footer.tsx";
+import { Card } from "./components/card";
+
+import Header from "./components/header/Header";
 
 const article = {
   title: "Breaking News: New Developments in Technology",
@@ -15,6 +18,10 @@ const article = {
 function App() {
   return (
     <>
+      <header>
+        <Header />
+      </header>
+      <Caroussel />
       <Card article={article} />
       <Footer />
     </>
