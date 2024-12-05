@@ -41,7 +41,7 @@ export default function Caroussel() {
   const [indexImage, setIndexImage] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => toggleImage(1), 1500);
+    const interval = setInterval(() => toggleImage(1), 4000);
     return () => clearInterval(interval);
   }, []);
 
