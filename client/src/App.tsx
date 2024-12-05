@@ -1,6 +1,9 @@
 import "./styles/Globals.css";
 import Caroussel from "./components/Caroussel/Caroussel.tsx";
 import { Card } from "./components/card";
+import Footer from "./components/footer/Footer";
+
+import Header from "./components/header/Header";
 const article = {
   title: "Breaking News: New Developments in Technology",
   urlToImage:
@@ -11,11 +14,12 @@ const article = {
   publishedAt: "2024-12-03T13:27:40Z",
 };
 
-import Footer from "./components/Footer/Footer";
-
 function App() {
   return (
     <>
+      <header>
+        <Header />
+      </header>
       <Caroussel />
       <Card article={article} />
       <Footer />

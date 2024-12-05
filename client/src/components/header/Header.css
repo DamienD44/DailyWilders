@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Emilys+Candy&family=Noto+Sans+JP:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Emilys+Candy&family=Ephesis&family=Noto+Sans+JP:wght@100..900&family=Ruge+Boogie&display=swap");
+.header-top {
+  padding-bottom: 10px;
+  border-bottom: 7px solid rgba(68, 103, 197, 0.863);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header-top section {
+  display: flex;
+  align-items: center;
+  /* height: 50px; */
+}
+
+.header-top section ul {
+  display: flex;
+  list-style: none;
+  justify-self: center;
+  margin-left: 10px;
+  flex: 0;
+}
+
+.dailywilders-logo {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  margin-right: 25px;
+  margin-bottom: 0;
+}
+
+.header-top section ul a {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.616);
+  text-decoration: none;
+}
+.header-top section ul a:hover {
+  color: rgba(0, 0, 0, 0.863);
+}
+
+.header-top section ul p {
+  margin: 0 10px 0 10px;
+}
+
+.header-top h2 {
+  font-family: "Emilys Candy", serif;
+  font-weight: 450;
+  font-style: normal;
+  font-size: 4rem;
+  flex: 1;
+  position: absolute;
+  right: 40%;
+  top: 50%;
+}
+
+.header-bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+
+.header-bottom ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 3vw;
+}
+.header-bottom img {
+  height: 25px;
+  width: auto;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.header-bottom ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: black;
+}
+
+.to-home img {
+  height: 25px;
+  width: auto;
+}
+
+.header-bottom ul li a:hover {
+  color: rgba(68, 103, 197, 0.863);
+}
+
+.header-bottom img:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1500px) {
+  .header-top h2 {
+    right: 40%;
+    font-size: 3.8rem;
+  }
+}
+@media (max-width: 1250px) {
+  .header-top h2 {
+    right: 35%;
+    font-size: 3.8rem;
+  }
+}
+@media (max-width: 950px) {
+  .header-top h2 {
+    right: 30%;
+  }
+}
+@media (max-width: 1080px) {
+  .header-top h2 {
+    position: static;
+  }
+  .dailywilders-logo {
+    height: 125px;
+    width: 125px;
+    margin: 10px;
+    margin-right: 25px;
+    margin-bottom: 0;
+  }
+  .header-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-top h2 {
+    position: static;
+    font-size: 3rem;
+  }
+  .dailywilders-logo {
+    height: 85px;
+    width: 85px;
+    margin: 10px;
+    margin-right: 25px;
+    margin-bottom: 0;
+  }
+}
