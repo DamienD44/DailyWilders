@@ -1,0 +1,35 @@
+.whole-card-container {
+  width: 50vw;
+  height: auto;
+  background-color: rgb(64, 43, 69);
+  display: grid;
+  grid-template-columns: 20vw 30vw;
+  grid-template-rows: 4vh 13vh 13vh 4vh;
+  box-shadow: 0 -1px 0 #a21d1d;
+}
+.title-grid {
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+}
+.fig-box {
+  grid-column: 1 / 1;
+  grid-row: 2 / 3;
+  object-fit: cover;
+}
+.fig-img {
+  height: 26vh;
+  width: 20vw;
+  object-fit: cover;
+}
+.author-name {
+  grid-row: 4 / 4;
+}
+.article-box {
+  width: 100%;
+  grid-column: 2 / 3;
+  grid-row: 3 / 3;
+}
+.publication-date {
+  grid-column: 2 / 2;
+  grid-row: 4 / 4;
+}
