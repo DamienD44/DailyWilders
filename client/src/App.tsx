@@ -1,5 +1,5 @@
 import "./App.css";
-import Footer from "../src/components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -8,5 +8,4 @@ function App() {
     </>
   );
 }
-
 export default App;
