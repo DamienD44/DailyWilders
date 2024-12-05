@@ -1,4 +1,4 @@
-import Caroussel from "./components/Caroussel/Caroussel";
+import Caroussel from "./components/Caroussel/Caroussel.tsx";
 import "./styles/Globals.css";
 
 function App() {
