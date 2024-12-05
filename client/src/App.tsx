@@ -10,10 +10,13 @@ const article = {
   publishedAt: "2024-12-03T13:27:40Z",
 };
 
+import Footer from "./components/Footer/Footer";
+
 function App() {
   return (
     <>
       <Card article={article} />
+      <Footer />
     </>
   );
 }
