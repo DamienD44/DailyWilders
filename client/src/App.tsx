@@ -1,5 +1,6 @@
-import "./App.css";
-import { Card } from "./components/Card";
+import "./styles/Globals.css";
+import Caroussel from "./components/Caroussel/Caroussel.tsx";
+import { Card } from "./components/card";
 const article = {
   title: "Breaking News: New Developments in Technology",
   urlToImage:
@@ -15,6 +16,7 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <>
+      <Caroussel />
       <Card article={article} />
       <Footer />
     </>
