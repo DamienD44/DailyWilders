@@ -1,6 +1,7 @@
 import "./App.css";
-import { Card } from "./components/card/Card";
 import Footer from "./components/Footer/Footer";
+import { Card } from "./components/card/Card";
+
 const article = {
   title: "Breaking News: New Developments in Technology",
   urlToImage:
