@@ -1,0 +1,30 @@
+.slider-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #5e5e5e;
+}
+.slide-button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  width: 90px;
+  height: auto;
+  padding: .5rem;
+  border: 3px solid #323232;
+  border-radius: .5rem;
+  transition: .2s ease;
+}
+.slide-button:hover {
+  transform: scale(120%, 120%);
+}
+.slider-img {
+  width: 100%;
+  object-fit: contain;
+}
+.slider-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
