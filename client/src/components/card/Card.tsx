@@ -26,3 +26,4 @@ export const Card: React.FC<CardProps> = ({ article }) => {
     </article>
   );
 };
+export default Card;

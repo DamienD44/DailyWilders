@@ -1,5 +1,6 @@
 import "./App.css";
-import { Card } from "./components/Card";
+import { Card } from "./components/card/Card";
+import Footer from "./components/Footer/Footer";
 const article = {
   title: "Breaking News: New Developments in Technology",
   urlToImage:
@@ -9,8 +10,6 @@ const article = {
     "Recent advancements in AI are changing the way we interact with machines.",
   publishedAt: "2024-12-03T13:27:40Z",
 };
-
-import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
