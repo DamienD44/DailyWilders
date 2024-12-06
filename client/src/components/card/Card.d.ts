@@ -5,5 +5,6 @@ export type CardProps = {
     author: string;
     description: string;
     publishedAt: string;
+    url?: string;
   };
 };
