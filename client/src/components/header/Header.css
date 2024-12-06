@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Emilys+Candy&family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Emilys+Candy&family=Ephesis&family=Noto+Sans+JP:wght@100..900&family=Ruge+Boogie&display=swap");
 .header-top {
-  padding-bottom: 10px;
   border-bottom: 7px solid rgba(68, 103, 197, 0.863);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  height: 150px;
 }
 
 .header-top section {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .header-top section ul {
@@ -43,15 +44,17 @@
   margin: 0 10px 0 10px;
 }
 
-.header-top h2 {
+.header-top section h2 {
   font-family: "Emilys Candy", serif;
   font-weight: 450;
   font-style: normal;
   font-size: 4rem;
   flex: 1;
-  position: absolute;
+  text-align: center;
+  padding-right: 22%;
+  /* position: absolute;
   right: 40%;
-  top: 50%;
+  top: 50%; */
 }
 
 .header-bottom {
@@ -60,7 +63,7 @@
   justify-content: center;
   align-items: center;
   gap: 5vw;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .header-bottom ul {
@@ -157,20 +160,17 @@
 /* Les media query (responsive) */
 
 @media (max-width: 1500px) {
-  .header-top h2 {
-    right: 40%;
-    font-size: 3.8rem;
+  .header-top section h2 {
+    padding-right: 30%;
   }
 }
 @media (max-width: 1250px) {
-  .header-top h2 {
-    right: 35%;
-    font-size: 3.8rem;
+  .header-top section {
+    flex-direction: column;
   }
-}
-@media (max-width: 950px) {
-  .header-top h2 {
-    right: 30%;
+  .header-top section h2 {
+    padding-right: 0;
+    margin-top: 2%;
   }
 }
 @media (max-width: 1080px) {
@@ -179,7 +179,7 @@
   }
   .dailywilders-logo {
     height: 125px;
-    width: 125px;
+    width: auto;
     margin: 10px;
     margin-right: 25px;
     margin-bottom: 0;
@@ -198,7 +198,7 @@
   }
   .dailywilders-logo {
     height: 85px;
-    width: 85px;
+    width: auto;
     margin: 10px;
     margin-right: 25px;
     margin-bottom: 0;

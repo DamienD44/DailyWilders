@@ -52,8 +52,8 @@ function Header() {
                 </Link>
               </li>
             </ul>
+            <h2>Daily Wilders</h2>
           </section>
-          <h2>Daily Wilders</h2>
         </section>
         <nav className="header-bottom">
           <ul className="nav-bar">
