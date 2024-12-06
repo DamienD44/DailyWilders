@@ -8,8 +8,6 @@ import Slider from "./Slider/Slider.tsx";
 
 export default function Caroussel() {
   const data = useLoaderData() as SliderI;
-  console.info("coucou", data);
-
   const [indexImage, setIndexImage] = useState(0);
 
   useEffect(() => {

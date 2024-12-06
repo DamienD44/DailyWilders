@@ -1,12 +1,21 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 550px;
+  height: auto;
+}
 .whole-card-container {
   display: grid;
-  grid-template-columns: 21vw 29vw;
+  grid-template-columns: 30% 70%;
   grid-template-rows: 4vh 13vh 13vh 4vh;
-  width: 50vw;
+  width: 100%;
   height: auto;
   border-top: 1px solid;
   border-bottom: 1px solid;
   text-align: center;
+  align-items: center;
 }
 .title-grid {
   grid-column: 2 / 2;
@@ -18,9 +27,11 @@
   object-fit: cover;
 }
 .fig-img {
-  height: 26vh;
-  width: 20vw;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  border: none;
 }
 .author-name {
   grid-row: 4 / 5;
