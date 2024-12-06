@@ -1,6 +1,8 @@
 import "./styles/Globals.css";
 import { Outlet } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
+
+import Footer from "./components/footer/Footer";
+
 import Header from "./components/header/Header";
 
 function App() {
