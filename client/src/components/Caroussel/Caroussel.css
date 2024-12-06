@@ -5,6 +5,12 @@
   align-items: center;
   width: fit-content;
   height: auto;
+  gap: 3rem;
+}
+.caroussel-figure {
+  width: 550px;
+  height: 412.5px;
+  border: 2px solid red;
 }
 .caroussel-img {
   width: 100%;

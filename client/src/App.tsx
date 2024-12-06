@@ -1,8 +1,7 @@
 import "./styles/Globals.css";
 import Caroussel from "./components/Caroussel/Caroussel.tsx";
 import Footer from "./components/Footer/Footer.tsx";
-import { Card } from "./components/card";
-
+import Card from "./components/card/Card.tsx";
 import Header from "./components/header/Header";
 
 const article = {

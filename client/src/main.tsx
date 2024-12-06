@@ -26,6 +26,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: async () => {
+          const data = await fetch(
+            `https://newsapi.org/v2/everything?q=QUERY&apiKey=${import.meta.env.VITE_APP_NEWS_API_KEY}`,
+          );
+
+          return data;
+        },
       },
     ],
   },
