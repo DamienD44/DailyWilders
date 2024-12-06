@@ -1,3 +1,6 @@
-export interface sliderI {
-  imageSrc: string;
+export interface SliderI {
+  articles: {
+    title: string;
+    urlToImage: string;
+  }[];
 }
