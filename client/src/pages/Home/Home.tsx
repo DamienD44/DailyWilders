@@ -8,6 +8,7 @@ type Article = {
   author: string;
   description: string;
   publishedAt: string;
+  url: string;
 };
 
 type LoaderData = {
