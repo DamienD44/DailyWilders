@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         element: <Home />,
         loader: async () => {
           const data = await fetch(
-            `https://newsapi.org/v2/everything?q=inspirant&language=fr&sortBy=relevancy&apiKey=${import.meta.env.VITE_APP_NEWS_API_KEY}`,
+            `https://newsapi.org/v2/everything?q=inspirant&language=fr&sortBy=relevancy&pageSize=12&apiKey=${import.meta.env.VITE_APP_NEWS_API_KEY}`,
           );
 
           return data;
