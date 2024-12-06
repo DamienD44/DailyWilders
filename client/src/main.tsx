@@ -4,7 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import AboutUs from "./pages/AboutUs";
 import Conditions from "./pages/Conditions";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home.tsx";
 import News from "./pages/News";
 import Politique from "./pages/Politique";
 
@@ -32,6 +32,17 @@ const router = createBrowserRouter([
       {
         path: "News",
         element: <News />,
+      },
+      {
+        path: "/",
+        element: <Home />,
+        loader: async () => {
+          const data = await fetch(
+            `https://newsapi.org/v2/everything?q=QUERY&apiKey=${import.meta.env.VITE_APP_NEWS_API_KEY}`,
+          );
+
+          return data;
+        },
       },
     ],
   },

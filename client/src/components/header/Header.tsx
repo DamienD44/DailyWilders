@@ -34,7 +34,7 @@ function Header() {
           <section>
             <img
               className="dailywilders-logo"
-              src="Logo-daily-wilder.png"
+              src="Logo renard.png"
               alt="Logo du site Daily Wilder"
             />
             <ul>
@@ -59,7 +59,7 @@ function Header() {
           <ul className="nav-bar">
             <li>
               {" "}
-              <NavLink className="to-home" to="/Home">
+              <NavLink className="to-home" to="/">
                 <img
                   src="Logo Home (1).png"
                   alt="Logo pour aller à la page d'acceuil"

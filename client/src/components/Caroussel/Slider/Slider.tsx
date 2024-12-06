@@ -1,9 +1,10 @@
-import type { sliderI } from "../../../types/caroussel";
-
-export default function Slider({ imageSrc }: sliderI) {
+interface SliderProps {
+  urlToImage: string;
+}
+export default function Slider({ urlToImage }: SliderProps) {
   return (
-    <figure className="slider-figure">
-      <img src={imageSrc} alt="" className="slider-img" />
+    <figure className="caroussel-figure">
+      <img src={urlToImage} alt="" className="caroussel-img" />
     </figure>
   );
 }
