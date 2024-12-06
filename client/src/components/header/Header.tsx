@@ -1,59 +1,104 @@
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { useRef, useState } from "react";
+import { useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(event.target as Node)
+      ) {
+        setIsSearchOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleSearchToggle = () => {
+    setIsSearchOpen((prev) => !prev);
+  };
+
   return (
     <>
-      <nav className="header">
+      <section className="header">
         <section className="header-top">
           <section>
             <img
               className="dailywilders-logo"
-              src="Logo-daily-wilder.png"
+              src="Logo renard.png"
               alt="Logo du site Daily Wilder"
             />
             <ul>
               <li>
-                <Link to="/">Français</Link>
+                <Link className="french" to="/home">
+                  Français
+                </Link>
               </li>
               <li>
                 <p>|</p>
               </li>
               <li>
-                <Link to="/">English</Link>
+                <Link className="english" to="/Home">
+                  English
+                </Link>
               </li>
             </ul>
           </section>
-          {/* <img
-            className="dailywilders-logo"
-            src="Logo-daily-wilder.png"
-            alt="Logo du site Daily Wilder"
-          /> */}
           <h2>Daily Wilders</h2>
         </section>
-        <section className="header-bottom">
-          <ul>
+        <nav className="header-bottom">
+          <ul className="nav-bar">
             <li>
               {" "}
-              <Link to="/">
+              <NavLink className="to-home" to="/">
                 <img
                   src="Logo Home (1).png"
                   alt="Logo pour aller à la page d'acceuil"
                 />
-              </Link>
+              </NavLink>
             </li>
             <li>
               {" "}
-              <Link to="/">About Us</Link>
+              <NavLink className="to-about-us" to="/AboutUs">
+                About Us
+              </NavLink>
             </li>
             <li>
               {" "}
-              <Link to="/">News</Link>
+              <NavLink className="to-news" to="/News">
+                News
+              </NavLink>
             </li>
           </ul>
-          <img src="logo_recherche-removebg-preview.png" alt="" />
-        </section>
-      </nav>
+          <div className="search-container">
+            <button
+              type="button"
+              className={`search-button ${isSearchOpen ? "hidden" : ""}`}
+              onClick={handleSearchToggle}
+            >
+              <img
+                src="logo_recherche-removebg-preview.png"
+                alt="Search Icon"
+              />
+            </button>
+            <input
+              type="text"
+              ref={searchRef}
+              className={`search-input ${isSearchOpen ? "open" : ""}`}
+              placeholder="Recherche..."
+            />
+          </div>
+        </nav>
+      </section>
     </>
   );
 }

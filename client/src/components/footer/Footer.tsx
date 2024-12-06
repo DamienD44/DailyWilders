@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer>
-      <img src="daily-wilder.png" alt="logo of website" />
+      <img src="Logo lapost.png" alt="logo of website" />
 
       <div className="txtFooter">
         <Link className="politique" to="/Politique">
