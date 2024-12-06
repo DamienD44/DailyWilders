@@ -1,5 +1,5 @@
-import { Card } from "../../components/Card/Card.tsx";
 import Caroussel from "../../components/Caroussel/Caroussel.tsx";
+import { Card } from "../../components/card/Card.tsx";
 
 const article = {
   title: "Breaking News: New Developments in Technology",
