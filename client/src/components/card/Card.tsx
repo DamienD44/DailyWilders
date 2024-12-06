@@ -1,4 +1,12 @@
-import type { CardProps } from "./Card.types";
+interface CardProps {
+  article: {
+    title: string;
+    urlToImage: string;
+    author: string;
+    description: string;
+    publishedAt: string;
+  };
+}
 
 import "./Card.css";
 
