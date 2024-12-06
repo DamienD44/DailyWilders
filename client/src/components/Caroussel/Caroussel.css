@@ -9,6 +9,7 @@
 }
 .caroussel-figure {
   width: 550px;
+  min-width: 320px;
   height: 412.5px;
 }
 .caroussel-img {
