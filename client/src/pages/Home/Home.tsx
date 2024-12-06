@@ -22,9 +22,11 @@ export default function Home() {
     <>
       <main className="main-container">
         <Caroussel />
-        {articles.map((article) => (
-          <Card key={article.title} article={article} />
-        ))}
+        <section className="card-container">
+          {articles.map((article) => (
+            <Card key={article.title} article={article} />
+          ))}
+        </section>
       </main>
     </>
   );
