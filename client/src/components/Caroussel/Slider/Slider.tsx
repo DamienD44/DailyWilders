@@ -1,10 +1,15 @@
+import { Link } from "react-router-dom";
+
 interface SliderProps {
   urlToImage: string;
+  url: string;
 }
-export default function Slider({ urlToImage }: SliderProps) {
+export default function Slider({ urlToImage, url }: SliderProps) {
   return (
     <figure className="caroussel-figure">
-      <img src={urlToImage} alt="" className="caroussel-img" />
+      <Link to={url} target="_blank">
+        <img src={urlToImage} alt="" className="caroussel-img" />
+      </Link>
     </figure>
   );
 }

@@ -31,7 +31,10 @@ export default function Caroussel() {
     <>
       <section className="caroussel-container">
         <Fragment>
-          <Slider urlToImage={data.articles[indexImage].urlToImage} />
+          <Slider
+            urlToImage={data.articles[indexImage].urlToImage}
+            url={data.articles[indexImage].url}
+          />
           {
             <section className="caroussel-button-wrapper">
               <button
