@@ -1,6 +1,14 @@
-import type { CardProps } from "./Card.d";
-
 import "./Card.css";
+
+interface CardProps {
+  article: {
+    title: string;
+    urlToImage: string;
+    author: string;
+    description: string;
+    publishedAt: string;
+  };
+}
 
 export const Card: React.FC<CardProps> = ({ article }) => {
   return (
