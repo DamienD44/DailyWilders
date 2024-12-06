@@ -2,6 +2,8 @@ import "./Header.css";
 import { useRef, useState } from "react";
 import { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
+// import { useLanguage } from "../traduction/LanguageContext";
+// import { translations } from "../traduction/translations";
 
 function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -26,6 +28,9 @@ function Header() {
   const handleSearchToggle = () => {
     setIsSearchOpen((prev) => !prev);
   };
+
+  // const { language, toggleLanguage } = useLanguage();
+  // const t = translations[language]; // Texte traduit
 
   return (
     <>

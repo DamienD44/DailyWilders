@@ -8,8 +8,6 @@ import Slider from "./Slider/Slider.tsx";
 
 export default function Caroussel() {
   const data = useLoaderData() as SliderI;
-  console.info("coucou", data);
-
   const [indexImage, setIndexImage] = useState(0);
 
   useEffect(() => {
@@ -33,7 +31,10 @@ export default function Caroussel() {
     <>
       <section className="caroussel-container">
         <Fragment>
-          <Slider urlToImage={data.articles[indexImage].urlToImage} />
+          <Slider
+            urlToImage={data.articles[indexImage].urlToImage}
+            url={data.articles[indexImage].url}
+          />
           {
             <section className="caroussel-button-wrapper">
               <button
