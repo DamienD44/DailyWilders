@@ -12,7 +12,6 @@
 .header-top section {
   display: flex;
   align-items: center;
-  /* height: 50px; */
 }
 
 .header-top section ul {
@@ -61,6 +60,7 @@
   justify-content: center;
   align-items: center;
   gap: 5vw;
+  margin-bottom: 1rem;
 }
 
 .header-bottom ul {
@@ -95,6 +95,66 @@
 .header-bottom img:hover {
   opacity: 1;
 }
+
+.to-home.active img {
+  opacity: 1;
+}
+
+.to-about-us.active {
+  color: rgba(68, 103, 197, 0.863);
+}
+.to-news.active {
+  color: rgba(68, 103, 197, 0.863);
+}
+
+/* La Bar de recherche */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  box-shadow: 0 1px 1px 1px rgb(97, 96, 96);
+}
+
+.search-button:hover {
+  background-color: rgba(250, 235, 215, 0.438);
+}
+
+.search-button.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 0;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 0 10px;
+  outline: none;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+.search-input.open {
+  width: 200px;
+  opacity: 1;
+}
+
+/* Les media query (responsive) */
 
 @media (max-width: 1500px) {
   .header-top h2 {
@@ -142,5 +202,14 @@
     margin: 10px;
     margin-right: 25px;
     margin-bottom: 0;
+  }
+  .header-bottom {
+    flex-direction: column;
+  }
+
+  .nav-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
   }
 }
